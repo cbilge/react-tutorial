@@ -50,9 +50,11 @@ var CommentList = React.createClass ({
 var CommentForm = React.createClass ({
   render: function() {
     return (
-      <div className = "commentForm">
-        I am a comment form
-      </div>
+      <form className = "commentForm">
+        <input type='text' placeholder='Your name' />
+        <input type='text' placeholder='Say something...' />
+        <input type='submit' value='Post' />
+      </form>
     );
   }
 });
@@ -75,6 +77,6 @@ var Comment = React.createClass ({
 });
 
 ReactDOM.render(
-  <CommentBox url='/api/comments' pollInterval={2000} />,
+  <CommentBox url="/api/comments.php" pollInterval={2000} />,
   document.getElementById('content')
 );
